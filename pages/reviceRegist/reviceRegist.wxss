@@ -1,0 +1,146 @@
+/* pages/postRegist/postRegist.wxss */
+.post-title{
+  display: flex;
+  background-color: rgb(255, 102, 102);
+  height: 80rpx;
+  width:100%;
+}
+
+.text-title{
+  width: 80%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.btn-save::after{
+  border: none;
+}
+
+.btn-save{
+  width: 20%;
+  color: white;
+  font-size: 14px;
+  background-color: rgb(255, 102, 102); 
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-title{
+  background-color:  #ECECEC;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.info-view{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px #ECECEC solid;
+}
+
+.post-text{
+  width: 220rpx;
+  height:80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: gray;
+}
+
+.post-input{
+  width: 520rpx;
+  height: 80rpx;
+  border: 3px;
+  font-size: 14px;
+}
+
+.input-placeholder{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-left: 10rpx;
+}
+
+.selcet-option{
+  margin-top: 20rpx;
+  height: 80rpx;
+  border-bottom: 1px #ECECEC solid;
+}
+
+.selcet-text{
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.radio-text{
+  height:80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.post-input2{
+  width: 440rpx;
+  height: 80rpx;
+  border: 3px;
+  font-size: 14px;
+  margin-left: 15rpx;
+}
+
+.image-orcode{
+  width: 80rpx;
+  height: 70rpx;
+  margin-left:30rpx;
+  margin-right:20rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.text-image{
+  width: 520rpx;
+  height:80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: gray;
+}
+
+.image{
+  margin-left:40rpx;
+  margin-right:40rpx;
+  margin-bottom:40rpx;
+  width: 45%;
+  height:300rpx;
+}
+
+.view-modal{
+  display: flex;
+  height: 70rpx;
+}
+
+.text-modal{
+  border:1px solid #ccc;
+  height:70rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.btn-modal{
+  color: white;
+  font-size: 14px;
+  height:70rpx;
+  background-color: rgb(255, 102, 102); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

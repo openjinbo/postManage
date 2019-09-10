@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "modal": "/Componet/select/select"
+  }
+}

@@ -1,0 +1,30 @@
+<!--pages/clueReport/clueReport.wxml-->
+<view class="post-title" >
+  <text class="text-title" space="ensp">        线索报查</text>
+  <button class="btn-save" bindtap="btnSave">提交</button>
+</view>
+<view class="info-title">
+  <text space="ensp"> 对收寄件物品怀疑有问题时记入</text>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 快递单号</text>
+  <input class="post-input2" type="text" value="{{postNo}}" bindinput ="bindinput_postNo" ></input>
+  <view bindtap="getQRCode">
+    <image class='image-orcode' src='/images/btn-barCode.png'></image>
+  </view>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 物品名称</text>
+  <input class="post-input" type="text" value="{{goods}}" bindinput ="bindinput_goods" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 备注</text>
+  <input class="post-input" type="text" value="{{comment}}" bindinput ="bindinput_comment" ></input>
+</view>
+<view>
+  <text class="text-image" space="ensp"> 物品照片</text>
+  <view class="blank-row"></view>
+  <view bindtap="getImage">
+    <image class="image" src="{{tempFilePaths}}" />
+  </view>
+</view>

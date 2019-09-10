@@ -1,0 +1,28 @@
+<!--pages/employeeInfo/employeeInfo.wxml-->
+<view class="post-title" >
+  <text class="text-title" space="ensp">        员工信息</text>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 姓名</text>
+  <input class="post-uninput" type="text" value="张三" disabled="disabled"></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 性别</text>
+  <input class="post-uninput" type="text" value="男" disabled="disabled"></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 身份证号码</text>
+  <input class="post-uninput" type="text" value="320402198702154748" disabled="disabled"></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 所属单位</text>
+  <input class="post-uninput" type="text" value="顺丰快递有限公司" disabled="disabled"></input>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 住址</text>
+  <input class="post-uninput" type="text" value="江苏省常州市太湖东路10" disabled="disabled"v></input>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 手机号码</text>
+  <input class="post-uninput" type="text" value="15821458456"  disabled="disabled"></input>
+</view>

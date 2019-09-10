@@ -1,0 +1,43 @@
+/* pages/systemInfo/systemDetails.wxss */
+.info-title{
+  display: flex;
+  height: 80rpx;
+}
+
+.text-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: black;
+}
+
+.msg-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: gray;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.details-view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: gray;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-align: left;
+}
+
+.date-title{
+  font-size: 13px;
+  color: gray;
+  text-align: right;
+  margin-right: 20rpx;
+}

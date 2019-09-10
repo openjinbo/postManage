@@ -1,0 +1,81 @@
+/* pages/systemInfo/systemInfo.wxss */
+.layout-vertical{
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px #ECECEC solid;
+}
+
+.layout-horizontal{
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.image-view{
+  width: 130rpx;
+  display: flex;
+  align-items: center;
+  justify-content:left;
+  margin-left:10rpx; 
+}
+
+.text-vertical{
+  width: 200rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-view{
+  width: 600rpx;
+  height: 95rpx;
+  display: flex;
+  align-items: center;
+  margin-top:30rpx;
+  flex-direction: row;
+}
+
+.msg-view{
+  width: 600rpx;
+  height: 65rpx;
+}
+
+.name-view{
+  width: 420rpx;
+}
+
+.name-text{
+  margin-left:10rpx; 
+  font-size: 15px;
+}
+
+.date-view{
+  width: 180rpx;
+}
+
+.date-text{
+  font-size: 13px;
+  color: gray;
+  display: flex;
+}
+
+.msg-text{
+  font-size: 13px;
+  color: gray;
+}
+
+.text-horizontal{
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.image-info {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.layout-horizontal:active {
+    background-color: #ECECEC;
+}  

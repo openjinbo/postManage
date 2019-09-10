@@ -1,0 +1,86 @@
+<!--pages/postRegist/postRegist.wxml-->
+<view class="post-title" >
+  <text class="text-title" space="ensp">        揽件登记</text>
+  <button class="btn-save" bindtap="btnSave">保存</button>
+</view>
+
+<scroll-view scroll-y="true" style="height: {{1100+screenHeight-568}}rpx">
+
+<view class="info-view">
+  <text class="post-text"space="ensp"> 类型</text>
+  <view>
+    <radio-group bindchange="bindinput_radio">
+      <radio value='0' checked="{{postKbn=='0'||postKbn==''?'checked':''}}" color="black">
+        <text class="radio-text" space="ensp">散件 </text>
+      </radio>
+      <radio value='1' checked="{{postKbn=='1'?'checked':''}}" color="black">
+        <text class="radio-text" space="ensp">协议件</text>
+      </radio>
+    </radio-group>
+  </view>
+</view>
+<view class="info-title">
+  <text class="text-info" space="ensp"> 寄件信息</text>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 寄件人姓名</text>
+  <input class="post-input" type="text" value="{{postName}}" bindinput ="bindinput_postName" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 身份证号码</text>
+  <input class="post-input" maxlength='18' type="idcard" value="{{identityNo}}" bindinput ="bindinput_identity" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 寄件人住址</text>
+  <input class="post-input" type="text" value="{{addr}}" bindinput ="bindinput_addr" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 手机号码</text>
+  <input class="post-input" type="text" value="{{tel}}" bindinput ="bindinput_tel" ></input>
+</view>
+<view class="info-title">
+  <text class="text-info" space="ensp"> 快递信息</text>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 物品名称</text>
+  <input class="post-input" type="text" value="{{goods}}" bindinput ="bindinput_goods" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 快递单号</text>
+  <input class="post-input2" type="text" value="{{postNo}}" bindinput ="bindinput_postNo" ></input>
+  <view bindtap="getQRCode">
+    <image class='image-orcode' src='/images/btn-barCode.png'></image>
+  </view>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 收件人电话</text>
+  <input class="post-input" type="text" value="{{consigneeTel}}" bindinput ="bindinput_consigneeTel" ></input>
+</view>
+<view class="info-title">
+  <text class="text-info" space="ensp"> 验视照片</text>
+</view>
+<view>
+  <text class="text-image" space="ensp">  请采集开箱验视照片</text>
+  <view class="blank-row"></view>
+  <view bindtap="getImage">
+    <image class="image" src="{{tempFilePaths}}" />
+  </view>
+</view>
+</scroll-view>
+
+<modal show="{{showCompanyModal}}" width="80%" height="80%" title="选择协议单位">
+<form bindsubmit="formSubmit">
+<!--提交按钮  -->
+  <view class="view-modal" >
+    <view>
+      <input type="text" class="text-modal" name="id" placeholder='输入关键词' placeholder-class="input-placeholder"></input>
+    </view>
+    <view>
+      <button formType="submit" class="btn-modal">查询</button>
+    </view>
+  </view>
+</form>
+<view class="selcet-option" data-index="{{idx}}"  wx:for="{{companyArray}}" wx:key="key" wx:for-index="idx" wx:for-item="itemName" bindtap="bindinput_postCompany">
+  <text class="selcet-text" space="ensp">  {{itemName}}</text>
+</view>
+</modal>
