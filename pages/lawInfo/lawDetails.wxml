@@ -1,0 +1,13 @@
+<!--pages/lawInfo/lawDetails.wxml-->
+<view class="info-title">
+  <text class="text-title">{{info.name}}</text>
+</view>
+<view class="date-title">
+  <text class="text-date">{{info.date}}</text>
+</view>
+<view class="msg-title">
+  <text>{{info.msg}}</text>
+</view>
+<view class="details-view">
+  <text>{{info.details}}</text>
+</view>

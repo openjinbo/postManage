@@ -1,0 +1,17 @@
+<!--pages/lawInfo/lawInfo.wxml-->
+<view class="info-title">
+  <text class="text-info" space="ensp"> 法律法规</text>
+</view>
+<view class="layout-vertical" wx:for="{{infos}}" wx:key="name" wx:for-index="idx">
+  <view class='layout-horizontal' bindtap="showDetails" id='{{idx}}'>
+    <view class="image-view">
+      <image class="image-info" src="\{{item.icon}}" mode="scaleToFill" />
+    </view>
+    <view class="name-view">
+      <text class="name-text">{{item.title}}</text>
+    </view>
+    <view class="date-view">
+      <text class="date-text">{{item.date}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/systemInfo/systemInfo.wxml-->
+<view class="layout-vertical" wx:for="{{infos}}" wx:key="name" wx:for-index="idx">
+  <view class='layout-horizontal' bindtap="showDetails" id='{{idx}}'>
+    <view class="image-view">
+      <image class="image-info" src="\{{item.icon}}" mode="scaleToFill" />
+    </view>
+    <view class="text-vertical">
+      <view class="title-view">
+        <view class="name-view">
+          <text class="name-text">{{item.name}}</text>
+        </view>
+        <view class="date-view">
+          <text class="date-text">{{item.date}}</text>
+        </view>
+      </view>
+      <view class="msg-view">
+        <text class="msg-text">{{item.msg}}</text>
+      </view>
+    </view>
+  </view>
+</view>

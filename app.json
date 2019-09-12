@@ -1,0 +1,27 @@
+{
+  "pages": [
+
+    "pages/reviceRegist/reviceRegist",
+    "pages/index/index",
+    "pages/postRegist/postRegist",
+    "pages/logs/logs",
+    "pages/adSelect/adSelect",
+    "pages/selectModel/selectModel",
+    "pages/systemInfo/systemInfo",
+    "pages/companyInfo/companyInfo",
+    "pages/employeeInfo/employeeInfo",
+    "pages/clueReport/clueReport",
+    "pages/systemInfo/systemDetails",
+    "pages/lawInfo/lawInfo",
+    "pages/lawInfo/lawDetails",
+    "pages/test/test"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3366cc",
+    "navigationBarTitleText": "神盾寄递业测试程序",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

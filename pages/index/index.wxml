@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="backColor">
+  <!--<view>
+    <text class="text-title">管理中心</text>
+  </view>
+  <view>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo " bindgetuserinfo="bindGetuserinfo"> 获取用户信息 </button>
+    <view class="userinfo-view" wx:else>
+      <image bin1dtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="text-center">{{userInfo.nickName}}</text>
+    </view>
+  </view>-->
+  <view>
+    <image class="image-title" src="/images/image-title.png" mode="cover"></image>
+  </view>
+  <view class="weui-grids">
+    <view class="weui-grid" wx:for="{{routers}}" wx:key="name">
+      <navigator url="{{item.url+'?name='+item.name+'&code='+item.code}}">
+      <view class='weui-grid__bg'>
+        <view class="weui-grid__icon">
+          <image src="\{{item.icon}}" mode="scaleToFill" />
+        </view>
+        <text class="weui-grid__label">{{item.name}}</text>
+      </view>
+      </navigator>
+    </view>
+  </view>
+</view>

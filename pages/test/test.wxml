@@ -1,0 +1,14 @@
+
+ 
+<view class="weui-grids">
+    <view class='weui-grid' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image class='weui-grid__icon '
+                src="{{item}}"
+                data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+                <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+        </image>
+    </view>
+    <!-- 用来提示用户上传图片 -->
+    <view class="weui-uploader__input-box pic" bindtap="chooseImg"> </view>
+  <button class="upload-img-btn" bindtap="chooseImg" type='primary'>拍照  / 上传</button>
+</view>

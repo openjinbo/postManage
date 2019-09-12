@@ -1,0 +1,43 @@
+<!--pages/postRegist/postRegist.wxml-->
+<view class="post-title" >
+  <text class="text-title" space="ensp">        派件登记</text>
+  <button class="btn-save" bindtap="btnSave">保存</button>
+</view>
+
+<scroll-view scroll-y="true" style="height: {{1100+screenHeight-568}}rpx">
+
+<view class="info-title">
+  <text space="ensp"> 寄件信息</text>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 寄件人姓名</text>
+  <input class="post-input" type="text" value="{{postName}}" bindinput ="bindinput_postName" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 手机号码</text>
+  <input class="post-input" type="text" value="{{tel}}" bindinput ="bindinput_tel" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 寄件人住址</text>
+  <input class="post-input" type="text" value="{{addr}}" bindinput ="bindinput_addr" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 物品名称</text>
+  <input class="post-input" type="text" value="{{goods}}" bindinput ="bindinput_goods" ></input>
+</view>
+<view class="info-title">
+  <text class="text-info" space="ensp"> 收件信息</text>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 收件人名称</text>
+  <input class="post-input" type="text" value="{{consigneeName}}" bindinput ="bindinput_consigneeName" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 手机号码</text>
+  <input class="post-input" type="text" value="{{consigneeTel}}" bindinput ="bindinput_consigneeTel" ></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 收件人住址</text>
+  <input class="post-input" type="text" value="{{consigneeAddr}}" bindinput ="bindinput_consigneeAddr" ></input>
+</view>
+</scroll-view>

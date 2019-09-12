@@ -1,0 +1,122 @@
+<!--pages/postRegist/postRegist.wxml-->
+<view class="title-button">
+  <button class="{{protocolkbn =='0'|| protocolkbn ==''?'unprotocol-checked':'unprotocol-unchecked'}}" bindtap="unProtocolBtn">
+    <text class="btn-text"space="ensp">散件</text>
+  </button> 
+  <button class="{{protocolkbn =='1'?'protocol-checked':'protocol-unchecked'}}" bindtap="protocolBtn">
+    <text class="btn-text"space="ensp">协议件</text>
+  </button>
+</view>
+<view class="info-title">
+  <text class="text-info" space="ensp"> 寄件信息</text>
+</view>
+<view class="details-title">
+  <image class='image-details2' src='/images/image-idcard.png'></image>
+  <text class="required-details" space="ensp"> *</text>
+  <text class="text-details" space="ensp"> 证件号码</text>
+</view>
+
+<view class="details-view">
+  <button class="btn-details" bindtap="ocrBtn">
+    <view class="btn-image-view">
+      <image class='btn-details-image' src='/images/image-menber-black.png'></image>
+    </view>
+    <text class="btn-details-text" space="ensp">OCR识别</text>
+  </button>
+  <button class="btn-details" bindtap="uncertifiedRegest">
+    <view class="btn-image-view">
+      <image class='btn-details-image2' src='/images/image-unregist.png'></image>
+    </view>
+    <text class="btn-details-text" space="ensp">无证登记</text>
+  </button>
+</view>
+<view class="details-title-info">
+  <image class='image-details-info' src='/images/image-menber.png'></image>
+  <text class="text-details-info" space="ensp"> 寄件人身份证号</text>
+</view>
+<view class="info-view">
+  <input class="post-input" placeholder="请输入寄件人身份证号" maxlength='18' type="idcard" value="{{identityNo}}" bindinput ="bindinput_identity" ></input>
+</view>
+<view class="details-title-info">
+  <image class='image-details-info2' src='/images/image-phone.png'></image>
+  <text class="text-details-info" space="ensp"> 寄件人手机号码</text>
+</view>
+<view class="info-view">
+  <input class="post-input" placeholder="请输入寄件人手机号码" type="number" value="{{tel}}" bindinput ="bindinput_tel" ></input>
+</view>
+
+<view class="details-title">
+  <image class='image-details' src='/images/image-file.png'></image>
+  <text class="required-details" space="ensp"> *</text>
+  <text class="text-details" space="ensp"> 面单名称</text>
+</view>
+<view class="info-view">
+  <input class="post-input" placeholder="请输入面单名称" type="text" value="{{goods}}" bindinput ="bindinput_goods" ></input>
+</view>
+<view class="details-title">
+  <image class='image-details' src='/images/image-find.png'></image>
+  <text class="required-details" space="ensp"> *</text>
+  <text class="text-details" space="ensp"> 验视照片（请拍摄寄递包裹内物品清晰照片）</text>
+</view>
+<view class="blank-row"></view>
+  
+<view class="weui-grids">
+  <view class='weui-grid' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+      <image class='weui-grid__icon '
+              src="{{item}}"
+              data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+              <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+      </image>
+  </view>
+  <view bindtap="getImage">
+    <image class="default-image" src="{{defaultImage}}" />
+  </view>
+</view>
+
+
+
+<view class="details-title">
+  <image class='image-details' src='/images/image-file.png'></image>
+  <text class="required-details" space="ensp"> *</text>
+  <text class="text-details" space="ensp"> 面单信息</text>
+</view>
+<view class="info-view2">
+  <input class="post-input2" placeholder="请拍摄面单照并扫描面单号" type="text" value="{{postNo}}" bindinput ="bindinput_postNo" disabled="true"></input>
+  <image class="orCode-image" src="{{orCodeImage}}" data-src="{{orCodeImage}}"  bindtap="previewOrCodeImg"></image>
+  <button class="orcode-view" bindtap="getQRCode">
+    <view class="image-orcode-view">
+      <image class='image-orcode' src='/images/image-camara.png'></image>
+    </view>
+    <text class="btn-details-text" space="ensp"> 拍摄扫描条形码</text>
+  </button>
+</view>
+
+<view class="details-title-info">
+  <image class='image-details-info2' src='/images/image-phone.png'></image>
+  <text class="text-details-info" space="ensp"> 收件人手机号码</text>
+</view>
+<view class="info-view">
+  <input class="post-input" placeholder="请输入收件人手机号码" type="number" value="{{consigneeTel}}" bindinput ="bindinput_consigneeTel" ></input>
+</view>
+<view class="view-save">
+  <button class="btn-save" bindtap="btnSave"> 
+    <text class="btn-save-text">确认登记</text>
+  </button>
+</view>
+
+<modal show="{{showCompanyModal}}" width="80%" height="80%" title="选择协议单位">
+<form bindsubmit="formSubmit">
+<!--提交按钮  -->
+  <view class="view-modal" >
+    <view>
+      <input type="text" class="text-modal" name="id" placeholder='输入关键词' placeholder-class="input-placeholder"></input>
+    </view>
+    <view>
+      <button formType="submit" class="btn-modal">查询</button>
+    </view>
+  </view>
+</form>
+<view class="selcet-option" data-index="{{idx}}"  wx:for="{{companyArray}}" wx:key="key" wx:for-index="idx" wx:for-item="itemName" bindtap="bindinput_postCompany">
+  <text class="selcet-text" space="ensp">  {{itemName}}</text>
+</view>
+</modal>

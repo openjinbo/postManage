@@ -1,0 +1,65 @@
+/* pages/lawInfo/lawInfo.wxss */
+.info-title{
+  background-color:  #ECECEC;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.layout-vertical{
+  height: 110rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px #ECECEC solid;
+}
+
+.layout-horizontal{
+  height: 110rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.layout-horizontal:active {
+    background-color: #ECECEC;
+}  
+
+.image-view{
+  width: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content:left;
+  margin-left:10rpx; 
+}
+
+.image-info {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.name-view{
+  width: 550rpx;
+  display: flex;
+  align-items: center;
+}
+
+.name-text{
+  color: gray;
+  margin-left:10rpx; 
+  font-size: 12px;
+}
+
+.date-view{
+  width: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-text{
+  font-size: 12px;
+  color: gray;
+
+
+}
+

@@ -1,0 +1,27 @@
+<!--pages/companyInfo/companyInfo.wxml-->
+<view class="post-title" >
+  <text class="text-title" space="ensp">        单位信息</text>
+</view>
+
+<view class="info-view">
+  <text class="post-text"space="ensp"> 公司名称</text>
+  <input class="post-uninput" type="text" value="XXXXX有限公司" disabled="disabled"></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 成立时间</text>
+  <input class="post-uninput" type="text" value="2018-01-20" disabled="disabled"></input>
+</view>
+<view class="info-view">
+  <text class="post-text" space="ensp"> 所属行业</text>
+  <input class="post-uninput" type="text" value="软件技术服务" disabled="disabled"></input>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 地址</text>
+  <input class="post-uninput" type="text" value="江苏省常州市太湖东路10" disabled="disabled"v></input>
+</view>
+<view class="info-view">
+  <text class="post-text"space="ensp"> 联系电话</text>
+  <input class="post-uninput" type="text" value="0519-12345678"  disabled="disabled"></input>
+</view>
+
+
